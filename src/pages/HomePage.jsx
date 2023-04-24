@@ -1,6 +1,13 @@
-import CardsList from "../components/CardsList/CardsList"
+import Header from "../components/Header/Header"
+import MainText from "../components/MainText/MainText"
+
 
 const Home = () => {
-    return <CardsList />
+    return (
+        <>
+            <Header />
+            <MainText />
+        </>
+    )
 }
 export default Home
