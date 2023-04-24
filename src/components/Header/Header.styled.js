@@ -25,6 +25,7 @@ export const LinkToTweets = styled(Link)`
   color: #373737;
 
   padding: 14px 56px;
+  margin-bottom: 20px;
 
   border: none;
 

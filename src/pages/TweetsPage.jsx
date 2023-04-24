@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import CardsList from "../components/CardsList/CardsList"
 import { getCards } from "../getCards"
-import BackButton from "../components/BackButton/BackButton"
 import LoadMore from "../components/LoadMore/LoadMore"
 import { ColorRing } from "react-loader-spinner"
 
@@ -26,7 +25,6 @@ const TweetsPage = () => {
     return (
         <>
             {cardsArray.length > 0 && <>
-                <BackButton />
                 <CardsList cardsList={cardsArray} />
 
                 {loading &&

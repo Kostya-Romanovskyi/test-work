@@ -1,12 +1,16 @@
-import { Outlet } from "react-router-dom"
+import { Outlet, useLocation } from "react-router-dom"
 import { LinkToTweets, NavContainer, HeaderContainer } from "./Header.styled"
 
 const Header = () => {
+    const location = useLocation()
+    console.log(location)
     return (
         <>
             <HeaderContainer>
                 <NavContainer>
-                    <LinkToTweets to='/tweets'>Tweets</LinkToTweets>
+                    {location.pathname === '/tweets' ?
+                        <LinkToTweets to='/'>Back to home</LinkToTweets> :
+                        <LinkToTweets to='/tweets'>Tweets</LinkToTweets>}
                 </NavContainer>
             </HeaderContainer>
             <Outlet />
