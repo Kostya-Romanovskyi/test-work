@@ -16,9 +16,6 @@ export async function changeFollowersValue(id, followers) {
     .put(`https://6443d0fe90738aa7c0783f3c.mockapi.io/user/${id}`, {
       followers: followers,
     })
-    .then((response) => {
-      console.log(response.data);
-    })
     .catch((error) => {
       console.error(error);
     });

@@ -10,12 +10,12 @@ const TweetsPage = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        const fetchUsers = async () => {
+        const onGetCards = async () => {
             setLoading(true)
             await getCards(page).then(responce => setCardArray(prevState => [...prevState, ...responce.data]))
             setLoading(false)
         }
-        fetchUsers()
+        onGetCards()
     }, [page])
 
     const handleClick = () => {

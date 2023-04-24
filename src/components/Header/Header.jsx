@@ -3,7 +3,6 @@ import { LinkToTweets, NavContainer, HeaderContainer } from "./Header.styled"
 
 const Header = () => {
     const location = useLocation()
-    console.log(location)
     return (
         <>
             <HeaderContainer>
