@@ -29,14 +29,32 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&display=swap"
       rel="stylesheet" />
+    <script type="text/javascript">
+      (function (obj) {
+        if (obj.search[1] === "/") {
+          var decoded = obj.search
+            .slice(1)
+            .split("&")
+            .map(function (s) {
+              return s.replace(/~and~/g, "&");
+            })
+            .join("?");
+          window.history.replaceState(
+            null,
+            null,
+            obj.pathname.slice(0, -1) + decoded + obj.hash
+          );
+        }
+      })(window.location);
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <script>
+    <!-- <script>
       // перенаправление на index.html, если запрошенная страница не найдена
       window.location.replace("/");
-    </script>
+    </script> -->
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
