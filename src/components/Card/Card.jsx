@@ -25,8 +25,6 @@ const Card = ({ cardsList, isFollowing, setIsFollowing }) => {
 
         const userToUpdate = cardsList.find(user => user.id === userID);
 
-        console.log(isFollowing[userID])
-
         if (!isFollowing[userID]) {
             userToUpdate.followers += 1
             userToUpdate.isFollowing = true
