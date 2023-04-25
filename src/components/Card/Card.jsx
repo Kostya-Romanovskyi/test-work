@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 import picture from '../../images/picture.png'
 import logo from '../../images/Vector.png'
 import { changeFollowersValue } from '../../getCards'
